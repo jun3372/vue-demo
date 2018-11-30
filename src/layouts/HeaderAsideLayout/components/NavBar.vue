@@ -42,9 +42,22 @@ export default {
     name: 'NavBar',
     methods: {
         logout() {
-            this.$router.push({
-                path: '/login'
-            })
+            // 提示退出成功
+            this.$message({
+                message: "退出成功",
+                type: 'success',
+            });
+
+            // 清理缓存
+            localStorage.clear()
+
+            // 倒计时跳转
+            setTimeout(() => {
+                // 跳转至登录页面
+                this.$router.push({
+                    path: '/login'
+                })
+            }, 1000);
         },
     },
 };
