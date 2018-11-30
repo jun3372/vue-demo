@@ -55,3 +55,25 @@
     axios.interceptors.response.use(data => {
 
     });
+
+# 运行步骤
+
+### 1. 克隆项目
+
+    git clone git@github.com:jun3372/vue-demo.git
+
+### 2. 进入项目目录
+
+    cd vue-demo
+
+### 3. 安装依赖
+
+    npm install
+
+### 4. 运行项目
+
+    npm start
+
+### 5. 打包项目
+
+    npm run build
