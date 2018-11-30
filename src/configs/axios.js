@@ -48,7 +48,6 @@ axios.interceptors.response.use(data => {
 
     return data
 }, error => {
-
     // 响应成功关闭loading
     loadinginstace.close()
 

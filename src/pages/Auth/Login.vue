@@ -81,6 +81,10 @@ export default {
             this.$http.post('/api/auth/login', this.user).then(res => {
                 let response = res.data;
                 if (response.code == 2000) {
+
+                    // 保存token
+                    localStorage.setItem('token', response.data.token);
+
                     this.$message({
                         message: "登录成功",
                         type: 'success',

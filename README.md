@@ -2,9 +2,11 @@
 
 > 该模板适用于从 0 到 1 开始搭建项目，内置基础的页面，路由和菜单展示。
 
+# [Demo演示](https://vue-demo-1251209281.cos-website.ap-chengdu.myqcloud.com/#/login)
+
 # 菜单配置
 
-> 文件 src/menuConfig.js
+> 文件 src/configs/menuConfig.js
 
     // headerMenuConfig：头部导航配置
     const headerMenuConfig = [];

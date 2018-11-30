@@ -80,12 +80,34 @@ Vue.use(Router);
 
 const Routers = new Router({
     routes,
-    mode: 'history'
+    // mode: 'history'
 })
 
 // 路由前置操作
 Routers.beforeEach((to, from, next) => {
     let path = to.path;
+    // 用户token
+    let token = localStorage.getItem('adminToken') ? localStorage.getItem('adminToken') : localStorage.getItem('token')
+    if (typeof token != 'undefined' && token != null) {
+        // 已经登录
+        if (path == '/login') {
+            console.log("已经登录过了");
+
+            return next({
+                path: "/"
+            });
+        }
+
+        return next();
+    }
+
+    // 没有登录跳转至登录页面
+    if (path != "/login") {
+        return next({
+            path: "/login"
+        });
+    }
+
 
     return next();
 });
