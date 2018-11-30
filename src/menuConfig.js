@@ -4,31 +4,26 @@
 
 const headerMenuConfig = [];
 
-const asideMenuConfig = [
-  {
+const asideMenuConfig = [{
     path: '/dashboard',
     name: 'Dashboard',
     icon: 'el-icon-menu',
-    children: [
-      {
-        path: '/analysis',
-        name: '分析页',
-      },
-      {
-        path: '/monitor',
-        name: '监控页',
-      },
-      {
-        path: '/workplace',
-        name: '工作台',
-      },
+    children: [{
+            path: '/analysis',
+            name: '分析页',
+        },
+        {
+            path: '/monitor',
+            name: '监控页',
+        },
+        {
+            path: '/workplace',
+            name: '工作台',
+        },
     ],
-  },
-  {
-    name: '登录',
-    path: '/login',
-    icon: 'home',
-  },
-];
+}];
 
-export { headerMenuConfig, asideMenuConfig };
+export {
+    headerMenuConfig,
+    asideMenuConfig
+};

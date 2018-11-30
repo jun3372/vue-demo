@@ -3,7 +3,7 @@
     <div class="user-login-bg" :style="{'background-image':`url(${backgroundImage})`}"></div>
     <div class="content-wrapper">
         <h2 class="slogan">
-            欢迎使用 <br /> ICE 内容管理系统
+            欢迎使用 <br /> Vue Admin Demo
         </h2>
         <div class="form-container">
             <h4 class="form-title">登录</h4>
@@ -81,17 +81,15 @@ export default {
             this.$http.post('/api/auth/login', this.user).then(res => {
                 let response = res.data;
                 if (response.code == 2000) {
-                    this.$notify({
-                        // message: '登录成功',
-                        title: "登录成功",
+                    this.$message({
+                        message: "登录成功",
                         type: 'success',
                     });
 
                     return this.toPath();
                 }
 
-                this.$notify({
-                    // title: "登录失败",
+                this.$message({
                     message: response.message,
                     type: 'warning',
                 });
