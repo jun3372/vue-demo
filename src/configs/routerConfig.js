@@ -12,6 +12,11 @@ const routerConfig = [{
         }],
     },
     {
+        name: '表单',
+        path: '/form',
+        component: '/Form/Base'
+    },
+    {
         path: '/login',
         name: 'login',
         layout: false,
